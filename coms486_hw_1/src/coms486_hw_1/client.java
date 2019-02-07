@@ -1,6 +1,7 @@
 package coms486_hw_1;
 import java.io.*;  
 import java.net.*;  
+
 public class client {
 
 		  public static void main(String argv[]) throws Exception  
