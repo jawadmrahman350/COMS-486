@@ -7,7 +7,7 @@ public class server {
     {  
         String sentence;  
         String modifiedSentence;  
-        BufferedReader inFromUser =  
+        BufferedReader userIn =  
           new BufferedReader(new InputStreamReader(System.in));  
         Socket clientSocket = new Socket("hostname", 6789);  
         DataOutputStream outToServer =  
@@ -16,7 +16,7 @@ public class server {
         BufferedReader inFromServer =  
                 new BufferedReader(new 
                 InputStreamReader(clientSocket.getInputStream()));  
-              sentence = inFromUser.readLine();  
+              sentence = userIn.readLine();  
               outToServer.writeBytes(sentence + '\n');  
               modifiedSentence = inFromServer.readLine();  
               System.out.println ("FROM SERVER: " + modifiedSentence);  
